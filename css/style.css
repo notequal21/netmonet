@@ -459,6 +459,11 @@ body {
   max-width: 200px;
 }
 
+.advantages-body__content.adapt {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .advantages-body__btns {
   margin: 50px 0 0 0;
   display: -webkit-box;
@@ -1055,6 +1060,15 @@ body {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     margin: 0 0 40px 0;
+  }
+
+  .advantages-body__content.adapt .advantages-body__content-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .advantages-body__btns {
