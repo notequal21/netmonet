@@ -352,6 +352,10 @@ body {
   position: relative;
 }
 
+.main-body__btns.btnfix {
+  padding: 0;
+}
+
 .main-body__btns-item {
   font-family: Roboto;
   font-weight: 500;
@@ -1207,7 +1211,8 @@ body {
 
   .advantages-body__btns-item {
     margin: 0 0 0 0;
-    padding: 4px 0 0 0;
+    padding: 10px 0 0 0;
+    height: 57px;
   }
 
   .advantages-body__btns-item:first-child {
