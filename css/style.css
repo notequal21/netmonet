@@ -467,6 +467,11 @@ body {
   position: relative;
 }
 
+.simple-body__item:nth-child(2) .simple-body__item-name::before,
+.simple-body__item:nth-child(2) .simple-body__item-name::after {
+  display: none;
+}
+
 .simple-body__item-phone {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,6 +507,26 @@ body {
   line-height: 26px;
   text-align: center;
   color: #FFFFFF;
+  position: relative;
+}
+
+.simple-body__item-name::before,
+.simple-body__item-name::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #1ABC0F;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+}
+
+.simple-body__item-name::before {
+  left: 0;
+}
+
+.simple-body__item-name::after {
+  right: 0;
 }
 
 .simple-body__descr {
@@ -629,6 +654,149 @@ body {
   padding: 15px 70px 15px 30px;
 }
 
+.setting {
+  padding: 120px 0;
+  background-color: #151515;
+}
+
+.setting-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.setting-body__title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: calc(26px + 24 * ((100vw - 320px) / 1600));
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 700px;
+}
+
+.setting-body__subtitle {
+  margin: 40px 0 0 0;
+  font-family: Roboto;
+  font-size: calc(18px + 4 * ((100vw - 320px) / 1600));
+  line-height: 26px;
+  color: #1ABC0F;
+  max-width: 500px;
+}
+
+.setting-body__subtitle span {
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+.setting-body__list {
+  margin: 40px 0 40px 0;
+}
+
+.setting-body__list li {
+  margin: 0 0 10px 0;
+  padding: 0 0 0 30px;
+  max-width: 500px;
+  font-family: Roboto;
+  font-size: calc(18px + 4 * ((100vw - 320px) / 1600));
+  line-height: 26px;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.setting-body__list li::before {
+  content: url(../img/icons/arrow.png);
+  position: absolute;
+  left: 0px;
+}
+
+.footer {
+  padding: 80px 0;
+  background-color: #1A3236;
+}
+
+.footer-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-body__col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-body__col .header-body__logo {
+  margin: 0 0 25px 0;
+}
+
+.footer-body__col-item {
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0 0 10px 0;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.footer-body__col-item:hover {
+  color: #1ABC0F;
+}
+
+.footer-body__col-title {
+  margin: 0 0 25px 0;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.footer-body__row {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-body__links {
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 @media (min-width: 650px) {
   .header-body .burger__btn {
     display: none;
@@ -728,6 +896,10 @@ body {
   .questions-body__item {
     margin: 0 auto 30px auto;
   }
+
+  .setting {
+    padding: 100px 0;
+  }
 }
 
 @media (max-width: 900px) {
@@ -791,6 +963,19 @@ body {
   .simple-body__item {
     margin: 0 20px 0 0;
   }
+
+  .footer-body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .footer-body__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin: 0 0 60px 0;
+  }
 }
 
 @media (max-width: 684px) {
@@ -842,6 +1027,15 @@ body {
 }
 
 @media (max-width: 480px) {
+  .main-body__btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .main-body__btns-item:nth-child(2) {
+    margin: 30px 0 0 0;
+  }
+
   .advantages-body__content-img {
     width: 120px;
     height: 120px;
