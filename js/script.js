@@ -58,7 +58,7 @@ if (document.documentElement.clientWidth < 1000) { // disable script if resoluti
             infinite:false,
             rows:1,
             variableWidth:true,
-            centerMode:true,
+            centerMode:false,
         });
     });
 
